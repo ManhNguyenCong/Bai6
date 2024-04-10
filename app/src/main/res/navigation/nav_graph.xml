@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listUsersFragment">
+
+    <fragment
+        android:id="@+id/listUsersFragment"
+        android:name="com.example.bai6.ui.fragment.ListUsersFragment"
+        android:label="fragment_list_users"
+        tools:layout="@layout/fragment_list_users" />
+</navigation>

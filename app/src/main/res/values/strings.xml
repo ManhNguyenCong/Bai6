@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Bai6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtListUsers">List of user</string>
+    <string name="txtIdLabel">Id:</string>
+    <string name="txtNameLabel">Name:</string>
+    <string name="txtGenderLabel">Gender:</string>
+    <string name="txtLocationLabel">Location:</string>
+    <string name="txtEmailLabel">Email:</string>
+    <string name="txtPhoneLabel">Phone:</string>
+    <string name="txtCellLabel">Cell:</string>
+    <string name="txtPictureLabel">Picture:</string>
+    <string name="txtNatLabel">Nat:</string>
+    <string name="txtDOBLabel">DOB:</string>
+    <string name="txtRegisterLabel">Registers:</string>
+    <string name="txtLoginLabel">Login:</string>
+    <string name="txtUserInfo">User\'s information</string>
+    <string name="cancel">Cancel</string>
+</resources>

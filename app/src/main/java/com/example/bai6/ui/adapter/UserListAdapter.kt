@@ -6,16 +6,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bai6.R
-import com.example.bai6.data.model.User
+import com.example.bai6.data.model.ApiUser
 import com.example.bai6.databinding.ItemListUsersBinding
 import com.example.bai6.util.loadImage
 
-class UserListAdapter(private val onItemClick: (User) -> Unit) :
-    ListAdapter<User, UserListAdapter.UserViewHolder>(DiffCallback) {
+class UserListAdapter(private val onItemClick: (ApiUser.User) -> Unit) :
+    ListAdapter<ApiUser.User, UserListAdapter.UserViewHolder>(DiffCallback) {
     class UserViewHolder(private val binding: ItemListUsersBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(user: User) {
+        fun bind(user: ApiUser.User) {
             binding.image.loadImage(user.picture.medium)
             binding.tvName.text = user.name.toString()
             binding.tvId.text = user.id.toString()
@@ -40,12 +40,12 @@ class UserListAdapter(private val onItemClick: (User) -> Unit) :
     }
 
     companion object {
-        private val DiffCallback = object : DiffUtil.ItemCallback<User>() {
-            override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+        private val DiffCallback = object : DiffUtil.ItemCallback<ApiUser.User>() {
+            override fun areItemsTheSame(oldItem: ApiUser.User, newItem: ApiUser.User): Boolean {
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
+            override fun areContentsTheSame(oldItem: ApiUser.User, newItem: ApiUser.User): Boolean {
                 return oldItem.name == newItem.name &&
                         oldItem.dob == newItem.dob &&
                         oldItem.cell == newItem.cell &&

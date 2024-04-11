@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
+    id("com.google.devtools.ksp") version "1.9.0-1.0.13"
 }
 
 android {
@@ -58,4 +59,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation("io.coil-kt:coil:1.1.1")
+
+    val daggerVs = "2.48"
+    implementation("com.google.dagger:dagger:$daggerVs")
+    ksp("com.google.dagger:dagger-compiler:$daggerVs")
 }
